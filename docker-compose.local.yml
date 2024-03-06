@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  src:
+    build:
+      context: .
+    command: "uvicorn src.main:app --host 0.0.0.0"
+    container_name: fastapi-backend-traffic_devils-local
+    restart: always
+    environment:
+      - "PORT=${SRC_PORT}"
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
+      - DEBUG=1
+    ports:
+      - "${SRC_PORT}:${DOCKER_PORT}"
+
+

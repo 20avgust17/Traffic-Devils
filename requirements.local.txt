@@ -1,0 +1,16 @@
+# core
+fastapi
+uvicorn
+python-multipart
+pydantic-settings
+
+#pydantic extensions
+python-dotenv
+
+#for testing
+pytest
+pytest-asyncio
+httpx
+locust
+requests
+coverage
